@@ -1,0 +1,55 @@
+common:
+  # The number of historical images
+  img_history_size: 2
+  # The number of future actions to predict, by default 64
+  action_chunk_size: 5
+  # The number of cameras to be used in the model
+  num_cameras: 2
+  num_hist_state: 1
+  state_embed_dim: 128
+  # encoders
+  text_encoder: "t5-small"
+  pretrained_text_encoder_name_or_path: "google/t5-v1_1-small"
+  vision_encoder: "dinov2-base"
+  pretrained_vision_encoder_name_or_path: "facebook/dinov2-base"
+
+
+
+dataset:
+  image_aspect_ratio: pad
+  # Maximum number of language tokens
+  tokenizer_max_length: 1024
+  image_size: 128
+  num_class: 8
+  state_dim: 6
+
+qformer:
+  num_queries: 32
+  embed_dim: 1280 # 1664/2048
+  cross_dim: 768 # 768/1152
+  causal: False 
+  depth: 3 #4
+  num_heads: 8 #16
+  use_checkpoint: False
+  
+diffusion:
+    global_cond_dim: 2048
+    n_obs_steps: 1
+    horizon: 1
+    n_action_steps: 1
+    down_dims: [512, 1024, 2048]
+    kernel_size: 5
+    n_groups: 8
+    diffusion_step_embed_dim: 128
+    use_film_scale_modulation: True
+    # Noise scheduler.
+    noise_scheduler_type: "DDPM"
+    num_train_timesteps: 100
+    beta_schedule: "squaredcos_cap_v2"
+    beta_start: 0.0001
+    beta_end: 0.02
+    prediction_type: "epsilon"
+    clip_sample: True
+    clip_sample_range: 1.0
+    # Inference
+    num_inference_steps:
