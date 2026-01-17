@@ -24,7 +24,7 @@ cd PriGo
 
 #### Installation Guide for Linux
 
-First clone this repo, and then run the following commands in the given order to install the dependency for **PriGo**.
+Run the following commands in the given order to install the dependency for **PriGo**.
 ```
 conda create -n prigo python=3.10
 conda activate prigo
