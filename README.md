@@ -12,3 +12,35 @@ Imitation learning in robotic manipulation often suffers from reproducing superf
 - [x] Checkpoints
 - [ ] PriGo-DP on robotic manipulation tasks
 - [ ] PriGo-FP on robotic manipulation tasks
+
+## Get Started
+
+#### Begin by cloning the repository:
+
+```shell
+git clone https://github.com/OTCVCG/PriGo.git
+cd PriGo
+```
+
+#### Installation Guide for Linux
+
+First clone this repo, and then run the following commands in the given order to install the dependency for **PriGo**.
+```
+conda create -n lotus python=3.9.19
+conda activate lotus
+cd Lotus
+pip install -r requirements.txt
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install -e .
+```
+
+#### Datasets
+We use high-quality human teleoperation demonstrations for the four task suites from [**LIBERO**] (https://github.com/Lifelong-Robot-Learning/LIBERO). To download the demonstration dataset, run:
+```python
+python libero_benchmark_scripts/download_libero_datasets.py
+```
+By default, the dataset will be stored under the ```LIBERO``` folder and all four datasets will be downloaded. To download a specific dataset, use
+```python
+python libero_benchmark_scripts/download_libero_datasets.py --datasets DATASET
+```
+where ```DATASET``` is chosen from `[libero_spatial, libero_object, libero_100, libero_goal`.
