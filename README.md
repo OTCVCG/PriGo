@@ -41,3 +41,9 @@ By default, the dataset will be stored under the ```LIBERO``` folder and all fou
 python libero_benchmark_scripts/download_libero_datasets.py --datasets DATASET
 ```
 where ```DATASET``` is chosen from `[libero_spatial, libero_object, libero_100, libero_goal`.
+
+## Usage of PriGo
+For training and testing of the primitive classifier, run:
+```python
+python main.py
+```
