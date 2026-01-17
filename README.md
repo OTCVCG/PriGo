@@ -26,12 +26,11 @@ cd PriGo
 
 First clone this repo, and then run the following commands in the given order to install the dependency for **PriGo**.
 ```
-conda create -n lotus python=3.9.19
-conda activate lotus
-cd Lotus
+conda create -n prigo python=3.10
+conda activate prigo
+cd PriGo
 pip install -r requirements.txt
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
-pip install -e .
 ```
 
 #### Datasets
