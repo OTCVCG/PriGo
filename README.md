@@ -43,7 +43,7 @@ python libero_benchmark_scripts/download_libero_datasets.py --datasets DATASET
 where ```DATASET``` is chosen from `[libero_spatial, libero_object, libero_100, libero_goal`.
 
 ## Usage of PriGo
-For training and testing of the primitive classifier, run:
+For training and testing with the [**pretrained models**] (https://drive.google.com/file/d/1DC2-UoIUG0cdh0w5YM-Yn6BqA2W4NChM/view?usp=drive_link) of the primitive classifier, run:
 ```python
 python main.py
 ```
