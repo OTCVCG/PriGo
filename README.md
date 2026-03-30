@@ -47,3 +47,39 @@ For training and testing with the [**pretrained models**](https://drive.google.c
 ```python
 python main.py
 ```
+
+## Qualitative Comparison
+
+To provide visual evidence of how PriGo improves policy behavior, we present a qualitative comparison between the baseline diffusion policy (CogACT) and our guided policy (PriGo-DP).  We select five representative frames from policy rollouts for the same task, both **with** and **without** PriGo guidance.
+
+### Visualization
+
+<p align="center">
+  <img src="assets/one_suits3.jpg" width="100%">
+  <img src="assets/one_suits4.jpg" width="100%">
+</p>
+
+<p align="center">
+Comparison of <b>PriGo-DP</b> (top row) and the vanilla diffusion policy <b>CogACT</b> (bottom row) on the <i>"prepare a set of tableware"</i> task.
+</p>
+
+---
+
+## Key Observations
+
+- **PriGo-DP (ours)** generates structured action sequences that align with the intended primitives:
+  - Rotation → placing the plate  
+  - Push + release → placing the bowl onto the plate  
+  - Grasp + release → placing the cup into the bowl  
+
+- **Baseline (CogACT)** exhibits unstructured and erroneous behaviors:
+  - Missing rotation → plate placed upside down  
+  - Unnecessary rotations during bowl placement  
+  - Incorrect grasping → grabbing the inner wall of the cup  
+  - Premature release → dropping the cup mid-air  
+
+---
+
+## Takeaway
+
+PriGo provides **primitive-level guidance**, enabling the policy to generate **more coherent and semantically aligned action sequences**, leading to more reliable task execution.
