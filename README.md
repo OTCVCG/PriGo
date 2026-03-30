@@ -64,7 +64,7 @@ Comparison of <b>PriGo-DP</b> (top row) and the vanilla diffusion policy <b>CogA
 
 ---
 
-## Key Observations
+### Key Observations
 
 - **PriGo-DP (ours)** generates structured action sequences that align with the intended primitives:
   - Rotation → placing the plate  
