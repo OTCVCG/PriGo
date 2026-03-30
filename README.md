@@ -49,8 +49,7 @@ python main.py
 ```
 
 ## Qualitative Comparison
-
-To provide visual evidence of how PriGo improves policy behavior, we present a qualitative comparison between the baseline diffusion policy (CogACT) and our guided policy (PriGo-DP).  We select five representative frames from policy rollouts for the same task, both **with** and **without** PriGo guidance.
+PriGo provides **primitive-level guidance**, enabling the policy to generate **more coherent and semantically aligned action sequences**, leading to more reliable task execution. To provide visual evidence of how PriGo improves policy behavior, we present a qualitative comparison between the baseline diffusion policy (CogACT) and our guided policy (PriGo-DP).  
 
 ### Visualization
 
@@ -79,7 +78,3 @@ Comparison of <b>PriGo-DP</b> (top row) and the vanilla diffusion policy <b>CogA
   - Premature release → dropping the cup mid-air  
 
 ---
-
-## Takeaway
-
-PriGo provides **primitive-level guidance**, enabling the policy to generate **more coherent and semantically aligned action sequences**, leading to more reliable task execution.
